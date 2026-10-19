@@ -1,0 +1,7 @@
+(version 1)
+
+# SK6812MINI-E reverse-mount footprint: the pads sit ~0.25 mm from the
+# notched corners of the LED's own cutout. Relax edge clearance for those pads only.
+(rule "SK6812MINI-E cutout"
+	(constraint edge_clearance (min 0.2mm))
+	(condition "A.memberOfFootprint('LED_*')"))
